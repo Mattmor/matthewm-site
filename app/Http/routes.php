@@ -44,4 +44,4 @@ Route::get('/tools/pdf', 'ToolsController@construction');
  * Controller for the Links section of the site.
  */
 Route::get('/links', 'LinksController@index');
-Route::get('/links/teamspeak', 'LinksController@ts');
+Route::get('/links/teamspeak', 'LinksController@ts'); 
