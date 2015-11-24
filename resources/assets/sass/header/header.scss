@@ -1,0 +1,211 @@
+.menu
+{
+    background-color: $black-transparant-95;
+    position: relative;
+    padding: 15px 0px;
+    width: 100%;
+    top:0px;
+    font-size: 14px;
+    position: fixed;
+    z-index: 100;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.transparentmenu
+{
+    margin-top: 50px;
+    position: relative;
+    padding: 15px 0px;
+    width: 100%;
+    top: 0;
+    font-size: 14px;
+    z-index: 100;
+    position: fixed;
+    color: $white;
+    background-color: $transparent-background;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.menu-left
+{
+    width: 44%;
+    text-align: right;
+    padding-right: 25px;
+    float: left;
+    margin-top:3px;
+    display: inline-block;
+}
+.menu-middle
+{
+    width: 12%;
+    display: inline-block;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.logo
+{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -70px;
+    cursor: pointer;
+}
+.hidden
+{
+    display: none;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.menu-right
+{
+    width: 43%;
+    padding-left: 25px;
+    margin-top:3px;
+    display: inline-block;
+}
+.menu-right-transparent
+{
+    width: 44%;
+    padding-left: 25px;
+    margin-top:3px;
+    display: inline-block;
+    float: right;
+}
+.menu-list
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    list-style: none;
+}
+.menu-list li
+{
+    padding-right: 15px;
+    display: inline-block;
+}
+.menu-right .menu-list li
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+}
+.menu-right-transparent .menu-list li
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+}
+.menu-left .menu-list li
+{
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+}
+.menu-list li a
+{
+    color: $black-header-text;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.menu-list li a:hover
+{
+    color: $black-header-hover;
+}
+.menu-right-transparent .menu-list li a
+{
+    color: $transparent-header-text;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.menu-right-transparent .menu-list li a:hover
+{
+    color: $transparent-header-hover;
+}
+.transparentmenu .menu-left .menu-list li a
+{
+    color: $transparent-header-text;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.transparentmenu .menu-left .menu-list li a:hover
+{
+    color: $transparent-header-hover;
+}
+@media screen and (max-width: 970px)  {
+    .menu-list li
+    {
+        padding-right: 0px;
+        display: inline-block;
+    }
+    .menu-right .menu-list li
+    {
+        padding-left: 0px;
+        padding-right: 5px;
+        display: inline-block;
+    }
+    .menu-right-transparent .menu-list li
+    {
+        padding-left: 0px;
+        padding-right: 5px;
+        display: inline-block;
+    }
+    .menu-left .menu-list li
+    {
+        padding-left: 0px;
+        padding-right: 5px;
+        display: inline-block;
+    }
+}
+.dropdown
+{
+    display: none;
+}
+@media screen and (max-width: 800px)  {
+    .menu-list
+    {
+        display: none;
+    }
+    .dropdown
+    {
+        display: inline-block;
+    }
+    .transparentmenu
+    {
+        margin-top: 0px;
+    }
+
+}
+.hamburger
+{
+    color: $hamburger-text;
+    background-color:  transparent;
+    border-radius: 5px;
+    border-width: 1px
+}
+.dropdown-menu
+{
+    background-color: $black-transparant-95;
+    color: $hamburger-dropdown-text;
+    font-size: 20px;
+}
+.dropdown-menu>li>a{
+    color: $hamburger-dropdown-text;
+}
+.dropdown-menu>li>a:focus,.dropdown-menu>li>a:hover{
+	color: $hamburger-dropdown-hover;
+	text-decoration:none;
+	background-color: $black-transparant-95;
+}
+.dropdown-menu>.active>a,.dropdown-menu>.active>a:focus,.dropdown-menu>.active>a:hover{
+	color: $hamburger-dropdown-hover;
+	text-decoration:none;
+	background-color: $black-transparant-95;
+	outline:0
+}
