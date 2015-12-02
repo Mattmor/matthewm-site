@@ -24,10 +24,14 @@ Route::get('/construction', 'HtmlController@construction');
  */
 Route::resource('/blog', 'PostsController');
 
-Route::controllers([
-    'auth' => 'Auth\AuthController',
-    'password' => 'Auth\PasswordController',
-    ]);
+// Authentication routes...
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// Registration routes...
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 /**
  * Controller for the tools section of the site.
@@ -44,4 +48,4 @@ Route::get('/tools/pdf', 'ToolsController@construction');
  * Controller for the Links section of the site.
  */
 Route::get('/links', 'LinksController@index');
-Route::get('/links/teamspeak', 'LinksController@ts'); 
+Route::get('/links/teamspeak', 'LinksController@ts');
