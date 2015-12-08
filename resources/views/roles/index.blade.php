@@ -1,5 +1,5 @@
 @extends('master')
 
 @section('content')
-    @include('blog.content._create')
+    @include('roles.content._displayroles')
 @endsection

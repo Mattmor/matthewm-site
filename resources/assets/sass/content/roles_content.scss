@@ -1,0 +1,28 @@
+.role-table-head
+{
+    padding: 10px;
+    border-top: 1px solid $dark-gray;
+    border-left: 1px solid $dark-gray;
+    border-right: 1px solid $dark-gray;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.role-table-body
+{
+    border-top: 1px solid $light-gray;
+    border-left: 1px solid $dark-gray;
+    border-right: 1px solid $dark-gray;
+}
+.role-table-body-cell
+{
+    padding: 10px;
+}
+.end-of-table
+{
+    border-top: 1px solid $light-gray;
+    border-left: 1px solid $dark-gray;
+}
+.create-button
+{
+    padding-top: 15px;
+}

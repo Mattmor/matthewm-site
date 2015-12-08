@@ -38,10 +38,32 @@ class User extends Model implements AuthenticatableContract,
     protected $hidden = ['password', 'remember_token'];
 
     /**
-     * A user can have many posts,
+     * A user can have many posts.
      */
     public function posts()
     {
         return $this->hasMany('App\Post');
     }
+    /**
+     * A User can have one Users.
+     */
+    public function role()
+    {
+        return $this->belongsTo('App\Role', 'role_id', 'id');
+    }
+
+    public function is($roleName)
+    {
+        foreach ($this->role()->get() as $role)
+        {
+            if ($role->name == $roleName)
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
 }

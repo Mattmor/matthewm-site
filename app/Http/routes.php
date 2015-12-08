@@ -22,7 +22,14 @@ Route::get('/construction', 'HtmlController@construction');
 /**
  *	Controller for the blog section of the site.
  */
-Route::resource('/blog', 'PostsController');
+Route::resource('blog', 'PostsController');
+
+/**
+ *	Controller for the Roles section of the site.
+ */
+Route::patch('roles/user/link/{id}', 'RolesController@linkUser');
+Route::patch('roles/user/{id}', 'RolesController@unlinkUser');
+Route::resource('roles', 'RolesController');
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
