@@ -6,6 +6,8 @@
         <title>{{ $pagetitle }}</title>
         <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" charset="utf-8">
         <link rel="stylesheet" href="{{ elixir('css/app.css') }}" media="screen" charset="utf-8">
+        <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
         <link rel="shortcut icon" href="/img/logofav.ico">
         <link rel="icon" href="/img/logofav.ico">
     </head>
