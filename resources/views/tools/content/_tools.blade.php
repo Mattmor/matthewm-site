@@ -14,8 +14,8 @@
 <div class="main-spacer"></div>
 <div class="container-fluid maincolor vertical-padding">
     <div class="container">
-        <div class="row spacebot">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 spacebot">
                 <div class="card">
                     <div class="card-header">
                         Music Learning Helper
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 spacebot">
                 <div class="card">
                     <div class="card-header">
                         Video player
@@ -49,8 +49,8 @@
             </div>
         </div>
 
-        <div class="row spacebot">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 spacebot">
                 <div class="card">
                     <div class="card-header">
                         Bulk file downloader
@@ -66,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 spacebot">
                 <div class="card">
                     <div class="card-header">
                         Chat
@@ -85,7 +85,7 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 spacebot">
                 <div class="card">
                     <div class="card-header">
                         Youtube downloader
@@ -101,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 spacebot">
                 <div class="card">
                     <div class="card-header">
                         PDF reader
