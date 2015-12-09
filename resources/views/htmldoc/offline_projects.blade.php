@@ -10,5 +10,3 @@
 @section('footer')
     @include('htmldoc.footer._footer')
 @endsection
-
-@stop

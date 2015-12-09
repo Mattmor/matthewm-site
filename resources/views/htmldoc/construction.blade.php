@@ -6,5 +6,3 @@
 @section('content')
     @include('htmldoc.content._construction')
 @endsection
-
-@stop
