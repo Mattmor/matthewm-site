@@ -13,12 +13,12 @@ var elixir = require('laravel-elixir');
 
 require('laravel-elixir-imagemin');
 
-// elixir.config.images = {
-//     outputFolder: '/public/img'
-// };
-
 elixir(function(mix) {
-    mix.imagemin();
+    mix.imagemin({
+    optimizationLevel: 4,
+    progressive: true,
+    interlaced: true
+    });
     mix.sass('app.scss');
     mix.version('css/app.css');
 });
