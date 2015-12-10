@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="{{ elixir('css/app.css') }}" media="screen" charset="utf-8">
         <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-        <link rel="shortcut icon" href="/img/logofav.ico">
-        <link rel="icon" href="/img/logofav.ico">
+        <link rel="shortcut icon" href="/images/logofav.ico">
+        <link rel="icon" href="/images/logofav.ico">
     </head>
     <body>
         @yield('header')

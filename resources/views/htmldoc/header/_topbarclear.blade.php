@@ -14,7 +14,7 @@
 	</div>
 
 	<div class="menu-middle hidden" id="logo" onclick="scrollToTop()">
-		<img src="img/logo.png" class="logo">
+		<img src="/images/logo.png" class="logo">
 	</div>
 
 	<div class="menu-right-transparent" id="menuright">
