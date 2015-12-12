@@ -33,6 +33,7 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3 post-text">
             <article class="">
+                <h3>{{ $post->title }}</h3>
                 {!! $post->body !!}
             </article>
         </div>
