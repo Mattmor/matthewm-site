@@ -6,6 +6,9 @@
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.4);
     color: #FFFFFF;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.35);
 }
 .card-header
 {

@@ -10,7 +10,8 @@ class Post extends Model
     protected $primaryKey = 'slug';
     protected $fillable = [
         'title',
-        'body'
+        'body',
+        'uploaded_image'
     ];
 
     public function getBodyAttribute($value)
@@ -23,7 +24,7 @@ class Post extends Model
     }
     public function setExcerptAttribute($value)
     {
-        $this->attributes['excerpt'] = substr($value, 0, 160);
+        $this->attributes['excerpt'] = substr($value, 0, 160).'...';
     }
     /**
      * An article is owned by a user

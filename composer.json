@@ -8,7 +8,9 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "laravelcollective/html": "^5.1",
-        "vtalbot/markdown": "2.0"
+        "vtalbot/markdown": "2.0",
+        "intervention/image": "^2.3",
+        "davejamesmiller/laravel-breadcrumbs": "^3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

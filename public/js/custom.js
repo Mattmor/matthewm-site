@@ -26,10 +26,10 @@ function topBar() {
         menuRight.classList.add('menu-right');
     }
 }
+
 /**
  * Scrolling to the top when clicked on logo in topbar
  */
-
 function scrollToTop() {
     window.scrollToY(0, 200, 'easeInOutQuint');
 }
@@ -129,5 +129,19 @@ function showDiscriptionCard(thisId) {
             cardDiscription.classList.add('card-discription-transition-down');
             cardDiscription.classList.remove('card-discription-transition-up');
         }, 10);
+    }
+}
+
+window.onscroll = function(){blogTop();};
+function blogTop() {
+    var haeder = document.getElementById('blog-header');
+    var getpos = document.body.getBoundingClientRect();
+    if (getpos.top === 0) {
+        haeder.classList.add('blog-header-background');
+        haeder.classList.remove('blog-header-background-border');
+    }
+    else {
+        haeder.classList.add('blog-header-background-border');
+        haeder.classList.remove('blog-header-background');
     }
 }

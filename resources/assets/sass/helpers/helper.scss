@@ -3,6 +3,18 @@
     float: right;
     margin-right: 15px;
 }
+.clear-both
+{
+    clear: both;
+}
+.clear-right
+{
+    clear: right;
+}
+.clear-left
+{
+    clear: left;
+}
 .uppercase
 {
     text-transform: uppercase;
@@ -43,6 +55,13 @@
     width: 100%;
     height: 50%;
     background-color: $darkfilter;
+}
+.darkfilrer4
+{
+    width: 100%;
+    height: 100%;
+    background-color: $darkfilter;
+    z-index: 40;
 }
 .spacebot
 {

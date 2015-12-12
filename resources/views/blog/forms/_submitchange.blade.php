@@ -11,6 +11,12 @@
  </div>
  <div class="form-group">
      <?php
+             echo Form::label('image', 'Image:');
+             echo Form::file('image', ['class' => 'form-control'])
+      ?>
+  </div>
+ <div class="form-group">
+     <?php
              echo Form::submit($submitButtonText, ['class' => 'btn btn-primary form-control']);
       ?>
   </div>
