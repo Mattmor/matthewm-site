@@ -15,9 +15,9 @@ require('laravel-elixir-imagemin');
 
 elixir(function(mix) {
     mix.imagemin({
-    optimizationLevel: 4,
-    progressive: true,
-    interlaced: true
+        optimizationLevel: 5,
+        progressive: true,
+        interlaced: true
     });
     mix.sass('app.scss');
     mix.version('css/app.css');
