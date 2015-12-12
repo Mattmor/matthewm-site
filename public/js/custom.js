@@ -1,7 +1,14 @@
 /**
  * When scrolling down, make top bar dark and animate it.
  */
-window.onscroll = function(){topBar();};
+window.onscroll = function(){
+    var url = window.location;
+    if (url.pathname.search("blog") == 1) {
+        blogTop();
+    } else {
+        topBar();
+    }
+};
 function topBar() {
     var body = document.body;
     var haeder = document.getElementById('header');
@@ -132,7 +139,6 @@ function showDiscriptionCard(thisId) {
     }
 }
 
-window.onscroll = function(){blogTop();};
 function blogTop() {
     var haeder = document.getElementById('blog-header');
     var getpos = document.body.getBoundingClientRect();
