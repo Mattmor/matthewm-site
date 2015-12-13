@@ -23,7 +23,7 @@ class LinksController extends Controller
     public function ts()
     {
         $pagetitle = 'Links';
-        return view('htmldoc.home')->with('pagetitle', $pagetitle);
+        return view('htmldoc.ts')->with('pagetitle', $pagetitle);
     }
 
 }
