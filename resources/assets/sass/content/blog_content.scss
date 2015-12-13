@@ -258,6 +258,14 @@ article > h2
     background-color: $light-gray;
     color: $light-gray-text;
 }
+.post-text a
+{
+    color: $blue;
+}
+.post-text a:hover
+{
+    color: $light-blue;
+}
 
 /**
  * Footer content

@@ -89,7 +89,7 @@
 }
 .headtext a
 {
-    color:#5DB0FF;
+    color:$light-blue;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -97,7 +97,7 @@
 .headtext a:hover,
 .headtext a:focus {
     text-decoration: none;
-    color: #3083FF;
+    color: $blue;
 }
 .headtitle
 {
@@ -161,7 +161,7 @@
 }
 .about a
 {
-    color:#5DB0FF;
+    color: $light-blue;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -169,7 +169,7 @@
 .about a:hover,
 .about a:focus {
     text-decoration: none;
-    color: #3083FF;
+    color: $blue;
 }
 .abouttitle
 {
