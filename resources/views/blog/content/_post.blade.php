@@ -38,6 +38,6 @@
             </article>
         </div>
     </div>
-    <div class="blog-divider-post">
+    <div class="blog-divider-post-footer">
     </div>
 </div>
