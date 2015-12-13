@@ -109,7 +109,7 @@ class PostsController extends Controller
         if ($request->hasFile('image')) {
             $imagePath = public_path().'/images/uploaded/'.$image->getClientOriginalName();
             Image::make($image->getRealPath())->save($imagePath);
-            $post->uploaded_image = '/images/uploaded/'.$image->getClientOriginalName();   
+            $post->uploaded_image = '/images/uploaded/'.$image->getClientOriginalName();
         }
 
         $post->update($request->all());
