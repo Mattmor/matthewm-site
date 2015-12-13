@@ -33,7 +33,7 @@
     <div class="row">
         <div class="col-md-6 col-md-offset-3 post-text">
             <article class="">
-                <h3>{{ $post->title }}</h3>
+                <h2>{{ $post->title }}</h2>
                 {!! $post->body !!}
             </article>
         </div>

@@ -56,8 +56,8 @@ class PostsController extends Controller
         if ($request->hasFile('image')) {
             $imagePath = public_path().'/images/uploaded/'.$image->getClientOriginalName();
             Image::make($image->getRealPath())->save($imagePath);
+            $post->uploaded_image = '/images/uploaded/'.$image->getClientOriginalName();
         }
-        $post->uploaded_image = '/images/uploaded/'.$image->getClientOriginalName();
 
         $post->slug = $post->title;
         $post->excerpt = $post->body;
@@ -103,14 +103,14 @@ class PostsController extends Controller
         $post = Post::findOrFail($id);
         $post->slug = $request->get('title');
         $post->excerpt = $request->get('body');
-        
+
         // Needs to be put somewhere else
         $image = $request->file('image');
         if ($request->hasFile('image')) {
             $imagePath = public_path().'/images/uploaded/'.$image->getClientOriginalName();
             Image::make($image->getRealPath())->save($imagePath);
+            $post->uploaded_image = '/images/uploaded/'.$image->getClientOriginalName();   
         }
-        $post->uploaded_image = '/images/uploaded/'.$image->getClientOriginalName();
 
         $post->update($request->all());
 
