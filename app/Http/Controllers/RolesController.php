@@ -12,14 +12,19 @@ use App\Http\Controllers\Controller;
 
 class RolesController extends Controller
 {
+
+    /**
+     * Only admin's can access any RolesController functions.
+     */
     public function __construct()
     {
         $this->middleware('role:Admin');
     }
+
     /**
-     * Display a listing of the resource.
+     * Display a listing of the roles.
      *
-     * @return \Illuminate\Http\Response
+     * @return view(roles/index)
      */
     public function index()
     {
@@ -29,9 +34,9 @@ class RolesController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new role.
      *
-     * @return \Illuminate\Http\Response
+     * @return view(roles/create)
      */
     public function create()
     {
@@ -40,10 +45,11 @@ class RolesController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created role in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * Save new role
+     * @return redirect(roles)
      */
     public function store(Request $request)
     {
@@ -54,10 +60,10 @@ class RolesController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified role.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return view(roles.show)->with(role)
      */
     public function show($id)
     {
@@ -69,10 +75,10 @@ class RolesController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified role.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return view(roles.edit) for role
      */
     public function edit($id)
     {
@@ -82,11 +88,11 @@ class RolesController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified role in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return redirect(roles)
      */
     public function update(Request $request, $id)
     {
@@ -96,7 +102,7 @@ class RolesController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified role from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -107,6 +113,15 @@ class RolesController extends Controller
         $role->delete();
         return redirect('roles');
     }
+
+    /**
+     * Link the specified user with the specified role in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * Make new role_id the role id
+     * @return redirect(roles/$role)
+     */
     public function linkUser(Request $request, $id)
     {
         $role = Role::findOrFail($id);
@@ -115,6 +130,15 @@ class RolesController extends Controller
         $user->save();
         return redirect('roles/'.$role->slug);
     }
+
+    /**
+     * Unlink the specified user with the specified role in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * Make new role_id 1 (member)
+     * @return redirect(roles)
+     */
     public function unlinkUser($id)
     {
         $user = User::findOrFail($id);

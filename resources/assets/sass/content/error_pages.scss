@@ -1,0 +1,62 @@
+.uppercase
+{
+    text-transform: uppercase;
+}
+.errorcontainer
+{
+    position: relative;
+    font-size: 100px;
+    font-family: 'Mexcellent' , cursive;
+    background-color: $gray;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 1em
+}
+.errorcontainer-child
+{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.errorcontainer p
+{
+    background-color: $gray;
+}
+
+#error
+{
+    text-shadow: 0 0 80px #FFFFFF, 0 0 30px #008000, 0 0 6px #0000FF;
+    color: #FFFFFF;
+}
+#error2
+{
+    text-shadow: 0 0 80px #FF0000, 0 0 30px #B22222, 0 0 6px #8B0000;
+    color: #FF0000;
+}
+#error3
+{
+    text-shadow: 0 0 80px #FFFFFF, 0 0 30px #008000, 0 0 6px #0000FF;
+    color: #FFFFFF;
+}
+#error4
+{
+    text-shadow: 0 0 80px #FFFFFF, 0 0 30px #008000, 0 0 6px #0000FF;
+    color: #FFFFFF;
+}
+#error5
+{
+    text-shadow: 0 0 80px #FFFFFF, 0 0 30px #008000, 0 0 6px #0000FF;
+    color: #FFFFFF;
+}
+#error6
+{
+    text-shadow: 0 0 80px #FFFFFF, 0 0 30px #008000, 0 0 6px #0000FF;
+    color: #FFFFFF;
+}
+#goback
+{
+    text-shadow: 0 0 80px #0080FF, 0 0 30px #3299FF, 0 0 6px #0066CC;
+    color: #0080FF;
+}

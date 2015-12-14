@@ -10,15 +10,21 @@ use App\Http\Controllers\Controller;
 class ToolsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the tools page.
      *
-     * @return \Illuminate\Http\Response
+     * @return view(htmldoc/tools)
      */
     public function index()
     {
         $pagetitle = 'Web Tools';
         return view('tools.tools')->with('pagetitle', $pagetitle);
     }
+
+    /**
+     * Display the tools construction page.
+     *
+     * @return view(htmldoc/ts)
+     */
     public function construction()
     {
         $pagetitle = 'Under construction';

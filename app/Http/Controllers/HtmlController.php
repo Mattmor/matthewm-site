@@ -10,9 +10,9 @@ use App\Http\Controllers\Controller;
 class HtmlController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the home page.
      *
-     * @return \Illuminate\Http\Response
+     * @return view(htmldoc/home)
      */
     public function index()
     {
@@ -20,16 +20,33 @@ class HtmlController extends Controller
         return view('htmldoc.home')->with('pagetitle', $pagetitle);
     }
 
+    /**
+     * Display the offline projects page.
+     *
+     * @return view(htmldoc/offline_projects)
+     */
     public function offlineProjects()
     {
         $pagetitle = 'Offline Projects';
         return view('htmldoc.offline_projects')->with('pagetitle', $pagetitle);
     }
+
+    /**
+     * Display the ai page.
+     *
+     * @return view(htmldoc/ai)
+     */
     public function ai()
     {
         $pagetitle = 'AI';
         return view('htmldoc.ai')->with('pagetitle', $pagetitle);
     }
+
+    /**
+     * Display the under construction page.
+     *
+     * @return view(htmldoc/construction)
+     */
     public function construction()
     {
         $pagetitle = 'Under construction';

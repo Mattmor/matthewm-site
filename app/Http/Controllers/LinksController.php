@@ -10,9 +10,9 @@ use App\Http\Controllers\Controller;
 class LinksController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display the links page.
      *
-     * @return \Illuminate\Http\Response
+     * @return view(htmldoc/links)
      */
     public function index()
     {
@@ -20,6 +20,11 @@ class LinksController extends Controller
         return view('htmldoc.links')->with('pagetitle', $pagetitle);
     }
 
+    /**
+     * Display the teamspeak page.
+     *
+     * @return view(htmldoc/ts)
+     */
     public function ts()
     {
         $pagetitle = 'Teamspeak';

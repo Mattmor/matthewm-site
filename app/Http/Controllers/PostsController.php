@@ -14,14 +14,18 @@ use App\Http\Controllers\Auth\AuthController;
 class PostsController extends Controller
 {
 
+    /**
+     * Only admin's can access create/edit functions
+     */
     public function __construct()
     {
         $this->middleware('role:Admin', ['only' => ['create', 'edit']]);
     }
+
     /**
-     * Display a listing of the resource.
+     * Display a listing of the posts.
      *
-     * @return \Illuminate\Http\Response
+     * @return view(blog/index)
      */
     public function index()
     {
@@ -31,9 +35,9 @@ class PostsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new post.
      *
-     * @return \Illuminate\Http\Response
+     * @return view(blog/create)
      */
     public function create()
     {
@@ -42,10 +46,10 @@ class PostsController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created post in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return Redirect(blog)
      */
     public function store(Requests\PostRequest $request)
     {
@@ -66,10 +70,10 @@ class PostsController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified post.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return view(blog/show)
      */
     public function show($id)
     {
@@ -79,10 +83,10 @@ class PostsController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified post.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return view(blog/edit)
      */
     public function edit($id)
     {
@@ -92,11 +96,12 @@ class PostsController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified post in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Update the resource with $id and $request
+     * @return Redirect to Blog
      */
     public function update(Requests\PostRequest $request, $id)
     {
@@ -113,12 +118,11 @@ class PostsController extends Controller
         }
 
         $post->update($request->all());
-
         return redirect('blog');
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified post from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
