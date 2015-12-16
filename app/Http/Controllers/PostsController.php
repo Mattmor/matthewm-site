@@ -30,7 +30,7 @@ class PostsController extends Controller
     public function index()
     {
         $pagetitle = "Blog";
-        $posts = Post::latest('updated_at')->get();
+        $posts = Post::latest('created_at')->get();
         return view('blog.index')->with(['posts' => $posts, 'pagetitle' => $pagetitle]);
     }
 
@@ -55,14 +55,7 @@ class PostsController extends Controller
     {
         $post = new Post($request->all());
 
-        // Needs to be put somewhere else
-        $image = $request->file('image');
-        if ($request->hasFile('image')) {
-            $imagePath = public_path().'/images/uploaded/'.$image->getClientOriginalName();
-            Image::make($image->getRealPath())->save($imagePath);
-            $post->uploaded_image = '/images/uploaded/'.$image->getClientOriginalName();
-        }
-
+        $post->uploaded_image = $request->file('image');
         $post->slug = $post->title;
         $post->excerpt = $post->body;
         \Auth::user()->posts()->save($post);
@@ -106,16 +99,10 @@ class PostsController extends Controller
     public function update(Requests\PostRequest $request, $id)
     {
         $post = Post::findOrFail($id);
+
+        $post->uploaded_image = $request->file('image');
         $post->slug = $request->get('title');
         $post->excerpt = $request->get('body');
-
-        // Needs to be put somewhere else
-        $image = $request->file('image');
-        if ($request->hasFile('image')) {
-            $imagePath = public_path().'/images/uploaded/'.$image->getClientOriginalName();
-            Image::make($image->getRealPath())->save($imagePath);
-            $post->uploaded_image = '/images/uploaded/'.$image->getClientOriginalName();
-        }
 
         $post->update($request->all());
         return redirect('blog');
@@ -129,6 +116,8 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $post->delete();
+        return redirect('blog');
     }
 }

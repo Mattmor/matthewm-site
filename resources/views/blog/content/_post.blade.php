@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    @if ($post->uploaded_image)
+    @if ($post->uploaded_image != '')
     <div class="row post-title-background" style="background: url(<?php echo $post->uploaded_image ?>) no-repeat scroll center center / cover;">
         <div class="darkfilrer">
         </div>

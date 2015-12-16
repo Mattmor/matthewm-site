@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <a href="{{ action('PostsController@show', [$post->slug]) }}">
-                    @if ($post->uploaded_image)
+                    @if ($post->uploaded_image != '')
                     <div class="post-image-small pull-left" style="background: url(<?php echo $post->uploaded_image ?>) no-repeat scroll center center / cover;">
                     </div>
                     @endif

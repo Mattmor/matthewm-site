@@ -44,6 +44,7 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasMany('App\Post');
     }
+
     /**
      * A User can have one Users.
      */
@@ -52,6 +53,9 @@ class User extends Model implements AuthenticatableContract,
         return $this->belongsTo('App\Role', 'role_id', 'id');
     }
 
+    /**
+     * Check if the user has the role specified
+     */
     public function is($roleName)
     {
         foreach ($this->role()->get() as $role)
@@ -61,9 +65,7 @@ class User extends Model implements AuthenticatableContract,
                 return true;
             }
         }
-
         return false;
     }
-
-
+    
 }
