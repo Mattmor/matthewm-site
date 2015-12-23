@@ -44,7 +44,7 @@
 					<div class="gittext">
 						All of my non-web projects are on github and they get updated regularly.
 					</div>
-					<a href="https://github.com/mattmorgan44" class="btn btn-default btn-lg github-btn">Visit My Github</a>
+					<a href="https://github.com/mattmor" class="btn btn-default btn-lg github-btn">Visit My Github</a>
 				</div>
 			</div>
 		</div>
