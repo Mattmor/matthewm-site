@@ -34,15 +34,15 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 spacebot">
                 <div class="card">
                     <div class="card-header">
-                        Video player
+                        Youtube downloader
                     </div>
-                    <a href="/tools/video">
-                        <div class="card-picture" id="videoplayer"></div>
+                    <a href="/tools/youtube">
+                        <div class="card-picture" id="youtubedownloader"></div>
                     </a>
                     <div class="card-discription card-discription-hide card-discription-transition-down">
-                        Got a video you want to watch but dont have a good video player installed? Now you can watch it on the web! Pick the video you want to watch and let the magic happen.
+                        Download video's from youtube to your computer. You can pick weather you want audio files only or video and audio files.
                     </div>
-                    <div class="card-arrow" id="1" onclick="showDiscriptionCard(this.id)">
+                    <div class="card-arrow" id="4" onclick="showDiscriptionCard(this.id)">
                         <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                 </div>
@@ -88,15 +88,15 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 spacebot">
                 <div class="card">
                     <div class="card-header">
-                        Youtube downloader
+                        Video player
                     </div>
-                    <a href="/tools/youtube">
-                        <div class="card-picture" id="youtubedownloader"></div>
+                    <a href="/tools/video">
+                        <div class="card-picture" id="videoplayer"></div>
                     </a>
                     <div class="card-discription card-discription-hide card-discription-transition-down">
-                        Download video's from youtube to your computer. You can pick weather you want audio files only or video and audio files.
+                        Got a video you want to watch but dont have a good video player installed? Now you can watch it on the web! Pick the video you want to watch and let the magic happen.
                     </div>
-                    <div class="card-arrow" id="4" onclick="showDiscriptionCard(this.id)">
+                    <div class="card-arrow" id="1" onclick="showDiscriptionCard(this.id)">
                         <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                 </div>

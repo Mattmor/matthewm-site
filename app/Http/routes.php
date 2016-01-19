@@ -44,11 +44,12 @@ Route::post('/register', 'Auth\AuthController@postRegister');
  * Controller for the tools section of the site.
  */
 Route::get('/tools', 'ToolsController@index');
+Route::get('/tools/youtube', 'ToolsController@showYoutube');
+Route::post('/tools/youtube', 'ToolsController@downloadYoutube');
 Route::get('/tools/musiclearning', 'ToolsController@construction');
 Route::get('/tools/video', 'ToolsController@construction');
 Route::get('/tools/filedownload', 'ToolsController@construction');
 Route::get('/tools/chat', 'ToolsController@construction');
-Route::get('/tools/youtube', 'ToolsController@construction');
 Route::get('/tools/pdf', 'ToolsController@construction');
 
 /**
@@ -56,3 +57,8 @@ Route::get('/tools/pdf', 'ToolsController@construction');
  */
 Route::get('/links', 'LinksController@index');
 Route::get('/links/teamspeak', 'LinksController@ts');
+
+/**
+ * Controller for the front end portfolio section of the site.
+ */
+Route::get('/portfolio/jason', 'PortfolioController@jason');

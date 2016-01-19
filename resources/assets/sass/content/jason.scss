@@ -1,0 +1,153 @@
+.jason-topbar
+{
+    position: fixed;
+    padding: 0px 0px;
+    width: 100%;
+    top: 0;
+    font-size: 24px;
+    z-index: 100;
+    background: #181818 url("/images/topbarjason.png") no-repeat center top;
+    font-family: 'BebasNeue Bold';
+    font-weight: 700;
+    line-height: 1;
+    box-shadow: 0px -3px 0px -1px rgba(255, 255, 255, 0.2) inset, 0px 8px 0px 0px rgba(0, 0, 0, 0.3)
+}
+.menu-list-jason-left
+{
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 21px;
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+.menu-list-jason-right
+{
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 21px;
+    padding-left: 0px;
+    list-style: none;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.menu-list-jason li
+{
+    padding-right: 20px;
+}
+.menu-list-jason li a
+{
+    color: #ababab;
+}
+.menu-list-jason li a:hover
+{
+    color: #dddddd;
+}
+.menu-left-jason
+{
+
+}
+.menu-middle-jason
+{
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.menu-right-jason
+{
+
+}
+.jasonlogo
+{
+    position: absolute;
+    top:0;
+    cursor: pointer;
+}
+.barber-background
+{
+    width: 100vw;
+    height: 100vh;
+    background: #000000 url("/images/barberbackground.jpg") no-repeat scroll center / cover;
+    color: #FFFFFF;
+    vertical-align: middle;
+    display: table-cell;
+}
+.jasontitle
+{
+    text-align: center;
+    padding-top: 50px;
+    line-height: 1;
+}
+.toptitle
+{
+    font-family: 'Damion', cursive;
+    font-size: 50px;
+}
+.toptitle::before ,.toptitle::after
+{
+    content: "";
+    width: 120px;
+    height: 1px;
+    margin-bottom: 12px;
+    display: inline-block;
+    border-width: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: #CCC;
+}
+.toptitle::after
+{
+    margin-left: 15px;
+}
+.middletitle
+{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 160px;
+    color: #000000;
+}
+.lowertitle
+{
+    padding-top: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 36px;
+}
+.lowertitle::before, .lowertitle::after
+{
+    content: "★";
+    font-size: 16px;
+    vertical-align: middle;
+}
+.black-text-border
+{
+    text-shadow: 1px 1px 0 #000,
+                2px 2px 0 #000,
+                3px 3px 0 #000,
+                4px 4px 1px rgba(0,0,0,.1),
+}
+.white-black-text-border
+{
+    text-shadow:1px 1px 0 #FFF,
+                1px -1px 0 #FFF,
+                -1px 1px 0 #FFF,
+                -1px -1px 0 #FFF,
+                2px 2px 0 #FFF,
+                2px -2px 0 #FFF,
+                -2px 2px 0 #FFF,
+                -2px -2px 0 #FFF,
+                3px 3px 0 #000,
+                3px -3px 0 #000,
+                -3px 3px 0 #000,
+                -3px -3px 0 #000,
+                4px 4px 0 #000,
+                4px -4px 0 #000,
+                -4px 4px 0 #000,
+                -4px -4px 0 #000,
+                5px 5px 1px rgba(0,0,0,.1),
+                5px -5px 1px rgba(0,0,0,.1),
+                -5px 5px 1px rgba(0,0,0,.1),
+                -5px -5px 1px rgba(0,0,0,.1),
+}
