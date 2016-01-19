@@ -1,6 +1,6 @@
 @extends('master')
 @section('header')
-    @include('htmldoc.header._topbarclear')
+    @include('htmldoc.header._topbar')
 @endsection
 
 @section('content')
