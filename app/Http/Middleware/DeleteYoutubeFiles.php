@@ -17,8 +17,8 @@ class DeleteYoutubeFiles
     public function handle($request, Closure $next)
     {
         $response = $next($request);
-        
-        $files = Storage::files('/home/matt/downloads/');
+
+        $files = Storage::files('youtube/');
         Storage::delete($files);
 
         return $response;

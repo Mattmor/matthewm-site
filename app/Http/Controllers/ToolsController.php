@@ -22,7 +22,7 @@ class ToolsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('deleteFiles', ['only' => 'downloadYoutube']);
+        $this->middleware('deleteFiles', ['only' => 'showYoutube']);
     }
 
     /**
@@ -85,7 +85,7 @@ class ToolsController extends Controller
         } else {
             return redirect('/tools/youtube');
         }
-        $dl->setDownloadPath('/home/matt/downloads/');
+        $dl->setDownloadPath(storage_path().'/app/youtube/');
         // Download the video to server
         try {
             $downloadYT = $dl->download($request["yturl"]);
@@ -117,7 +117,5 @@ class ToolsController extends Controller
             $fileLocation = $dl->getDownloadPath().$downloadYT->getTitle().'.mp4';
             return response()->download($fileLocation , $downloadYT->getTitle().'.mp4', $headers);
         }
-
-
     }
 }
