@@ -108,15 +108,14 @@ class ToolsController extends Controller
             $headers = array(
                 'Content-Type: audio/mpeg',
             );
-
             $fileLocation = $dl->getDownloadPath().$downloadYT->getTitle().'.mp3';
-            return response()->download($fileLocation , $downloadYT->getTitle(), $headers);
+            return response()->download($fileLocation , $downloadYT->getTitle().'.mp3', $headers);
         } elseif ($request["type"] == "Video") {
             $headers = array(
                 'Content-Type: video/mp4',
             );
             $fileLocation = $dl->getDownloadPath().$downloadYT->getTitle().'.mp4';
-            return response()->download($fileLocation , $downloadYT->getTitle(), $headers);
+            return response()->download($fileLocation , $downloadYT->getTitle().'.mp4', $headers);
         }
 
 
