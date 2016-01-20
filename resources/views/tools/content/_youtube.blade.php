@@ -6,18 +6,16 @@
                 <div class="form-group">
                     <?php
                         echo Form::label('yturl', 'Youtube URL:');
-                        echo Form::text('yturl', null, ['class' => 'form-control']);
+                        echo Form::text('yturl', null, ['class' => 'form-control', 'placeholder' => 'Put the youtube URL here']);
                     ?>
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-3">
                 <div class="form-group youtube-radio">
-                    <?php
-                        echo Form::label('type', 'Audio (mp3):', ['class' => 'youtube-radio-label']);
-                        echo Form::radio('type', 'Audio', true);
-                        echo Form::label('type', 'Video (mp4):', ['class' => 'youtube-radio-label']);
-                        echo Form::radio('type', 'Video');
-                    ?>
+                    <input name="type" value="Audio" id="audio" type="radio">
+                    <label for="audio">Audio (mp3)</label>
+                    <input name="type" value="Video" id="video" type="radio">
+                    <label for="video">Video (mp4)</label>
                 </div>
             </div>
             <div class="col-md-6 col-md-offset-3">

@@ -1,14 +1,3 @@
-.form-group input[type="radio"]
-{
-    margin: 10px;
-    position: relative;
-    vertical-align: middle;
-    background-color: #FF0000;
-}
-.youtube-radio
-{
-    vertical-align: middle;
-}
 .youtube-content
 {
     height: 100vh;
@@ -16,4 +5,61 @@
     background-color: $gray;
     color: $white;
     vertical-align: middle;
+}
+.form-group input[type="radio"],
+.form-group input[type=checkbox]
+{
+    visibility: hidden;
+    position: absolute;
+}
+.youtube-radio label
+{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    font-size: 13px;
+}
+.youtube-radio input[type=radio] + label:before,
+.youtube-radio input[type=checkbox] + label:before
+{
+    height:16px;
+    margin-right: 4px;
+    content: " ";
+    display:inline-block;
+    vertical-align: baseline;
+    transition: 0.3s;
+    border:1px solid #FFF;
+    border-radius:10px;
+    box-shadow: inset 0 -3px 6px #000;
+    transition: 0.3s;
+}
+.youtube-radio input[type=radio] + label:before
+{
+    border-radius:50%;
+    width:16px;
+}
+input[type=checkbox] + label:before
+{
+    border-radius:2px;
+    width:26px;
+}
+/* CHECKED */
+.youtube-radio input[type=radio]:checked + label::before,
+.youtube-radio input[type=checkbox]:checked + label::before
+{
+    content: '\2022';
+    box-shadow: inset 0 -1px 3px #FFFFFF, inset 0 0 1px #000, inset 0 0 0 3px $light-blue;
+}
+.btn-primary
+{
+    background-color: $light-blue;
+    border-color: $blue;
+    color: $dark-gray;
+}
+.btn-primary:focus, .btn-primary:active, .btn-primary:hover
+{
+    background-color: $blue;
+    border-color: $white;
 }
