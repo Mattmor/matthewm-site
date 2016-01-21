@@ -56,6 +56,7 @@ class RolesController extends Controller
         $role = new Role($request->all());
         $role->slug = $role->name;
         $role->save();
+        \Session::flash('flash_message', 'The role has been successfully created.');
         return redirect('roles');
     }
 
@@ -98,6 +99,7 @@ class RolesController extends Controller
     {
         $role = Role::findOrFail($id);
         $role->update($request->all());
+        \Session::flash('flash_message', 'The role has been successfully edited.');
         return redirect('roles');
     }
 
@@ -111,6 +113,7 @@ class RolesController extends Controller
     {
         $role = Role::findOrFail($id);
         $role->delete();
+        \Session::flash('flash_message', 'The role has been successfully deleted.');
         return redirect('roles');
     }
 
@@ -128,6 +131,7 @@ class RolesController extends Controller
         $user = User::findOrFail($request->user);
         $user->role_id = $role->id;
         $user->save();
+        \Session::flash('flash_message', 'The role '.$role->name.' has been linked to the user '.$user->name);
         return redirect('roles/'.$role->slug);
     }
 
@@ -144,6 +148,7 @@ class RolesController extends Controller
         $user = User::findOrFail($id);
         $user->role_id = 1;
         $user->save();
+        \Session::flash('flash_message', 'The user '.$user->name. ' has been stripped of all roles');
         return redirect('roles');
     }
 }

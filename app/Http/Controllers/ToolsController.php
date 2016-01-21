@@ -116,12 +116,14 @@ class ToolsController extends Controller
                 'Content-Type: audio/mpeg',
             );
             $fileLocation = $dl->getDownloadPath().$downloadYT->getTitle().'.mp3';
+            \Session::flash('flash_message', 'Your download is starting.');
             return response()->download($fileLocation , $downloadYT->getTitle().'.mp3', $headers);
         } elseif ($request["type"] == "Video") {
             $headers = array(
                 'Content-Type: video/mp4',
             );
             $fileLocation = $dl->getDownloadPath().$downloadYT->getTitle().'.mp4';
+            \Session::flash('flash_message', 'Your download is starting.');
             return response()->download($fileLocation , $downloadYT->getTitle().'.mp4', $headers);
         }
     }

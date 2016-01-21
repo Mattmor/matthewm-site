@@ -59,6 +59,7 @@ class PostsController extends Controller
         $post->slug = $post->title;
         $post->excerpt = $post->body;
         \Auth::user()->posts()->save($post);
+        \Session::flash('flash_message', 'Your post has been successfully created.');
         return redirect('/blog');
     }
 
@@ -105,6 +106,7 @@ class PostsController extends Controller
         $post->excerpt = $request->get('body');
 
         $post->update($request->all());
+        \Session::flash('flash_message', 'Your post has been successfully updated.');
         return redirect('blog');
     }
 
@@ -118,6 +120,7 @@ class PostsController extends Controller
     {
         $post = Post::findOrFail($id);
         $post->delete();
+        \Session::flash('flash_message', 'Your post has been successfully deleted.');
         return redirect('blog');
     }
 }
