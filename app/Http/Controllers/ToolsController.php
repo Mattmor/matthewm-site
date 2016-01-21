@@ -93,6 +93,7 @@ class ToolsController extends Controller
         try {
             $downloadYT = $dl->download($request["yturl"]);
         } catch (NotFoundException $e) {
+            dd($e);
             $pagetitle = 'Youtube Downloader';
             \Session::flash('flash_message_danger', 'The video you requested was not found, please try again.');
             return redirect('/tools/youtube')->with('pagetitle', $pagetitle);
