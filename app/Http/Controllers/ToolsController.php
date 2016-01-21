@@ -105,6 +105,7 @@ class ToolsController extends Controller
             \Session::flash('flash_message_danger', 'The video you requested cannot be found due to Copyright.');
             return redirect('/tools/youtube')->with('pagetitle', $pagetitle);
         } catch (\Exception $e) {
+            dd($e);
             $pagetitle = 'Youtube Downloader';
             \Session::flash('flash_message_danger', 'Something went wrong. Please try again.');
             return redirect('/tools/youtube')->with('pagetitle', $pagetitle);
