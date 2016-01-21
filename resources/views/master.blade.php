@@ -18,6 +18,8 @@
         @yield('content')
 
         @yield('footer')
+
+        @yield('flash')
     </body>
     <script src="/js/custom.js" charset="utf-8"></script>
 </html>

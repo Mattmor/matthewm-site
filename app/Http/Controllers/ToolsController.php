@@ -67,7 +67,8 @@ class ToolsController extends Controller
     {
         if ($request["yturl"] == "") {
             $pagetitle = 'Youtube Downloader';
-            return view('tools.youtube')->with('pagetitle', $pagetitle);
+            \Session::flash('flash_message_danger', 'You need to put a URL into the URL box to use this.');
+            return redirect('/tools/youtube')->with('pagetitle', $pagetitle);
         }
         if ($request["type"] == "Audio") {
             $dl = new YoutubeDl([
@@ -83,24 +84,30 @@ class ToolsController extends Controller
                 'output' => '%(title)s.%(ext)s',
             ]);
         } else {
-            return redirect('/tools/youtube');
+            $pagetitle = 'Youtube Downloader';
+            \Session::flash('flash_message_danger', 'Pick a file type to make the downloader work.');
+            return redirect('/tools/youtube')->with('pagetitle', $pagetitle);
         }
         $dl->setDownloadPath(storage_path().'/app/youtube/');
         // Download the video to server
         try {
             $downloadYT = $dl->download($request["yturl"]);
         } catch (NotFoundException $e) {
-            dd($e);
-            return redirect('/tools/youtube');
+            $pagetitle = 'Youtube Downloader';
+            \Session::flash('flash_message_danger', 'The video you requested was not found, please try again.');
+            return redirect('/tools/youtube')->with('pagetitle', $pagetitle);
         } catch (PrivateVideoException $e) {
-            dd($e);
-            return redirect('/tools/youtube');
+            $pagetitle = 'Youtube Downloader';
+            \Session::flash('flash_message_danger', 'The video you requested is a private video and could not be downloaded.');
+            return redirect('/tools/youtube')->with('pagetitle', $pagetitle);
         } catch (CopyrightException $e) {
-            dd($e);
-            return redirect('/tools/youtube');
+            $pagetitle = 'Youtube Downloader';
+            \Session::flash('flash_message_danger', 'The video you requested cannot be found due to Copyright.');
+            return redirect('/tools/youtube')->with('pagetitle', $pagetitle);
         } catch (\Exception $e) {
-            dd($e);
-            return redirect('/tools/youtube');
+            $pagetitle = 'Youtube Downloader';
+            \Session::flash('flash_message_danger', 'Something went wrong. Please try again.');
+            return redirect('/tools/youtube')->with('pagetitle', $pagetitle);
         }
 
         // Download the video to client

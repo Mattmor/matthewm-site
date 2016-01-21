@@ -10,3 +10,7 @@
 @section('footer')
 
 @endsection
+
+@section('flash')
+    @include('htmldoc.flash._basicflash')
+@endsection
