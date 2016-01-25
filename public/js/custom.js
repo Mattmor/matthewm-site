@@ -151,3 +151,8 @@ function blogTop() {
         haeder.classList.remove('blog-header-background');
     }
 }
+
+function showLoader() {
+    var loader = document.getElementById('loader');
+    loader.style.display = "block";
+}

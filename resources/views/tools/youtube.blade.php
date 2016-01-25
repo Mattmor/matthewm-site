@@ -1,4 +1,8 @@
 @extends('master')
+@section('headspace')
+    <script src="/js/loadingBar.js" type="text/javascript" charset="utf-8"></script>
+@endsection
+
 @section('header')
     @include('htmldoc.header._topbar')
 @endsection
