@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
-use Illuminate\Cookie\CookieJar;
 use Storage;
 use Cookie;
 
@@ -47,6 +46,33 @@ class ToolsController extends Controller
     {
         $pagetitle = 'Under construction';
         return view('htmldoc.construction')->with('pagetitle', $pagetitle);
+    }
+
+    /**
+     * Display the html to text page.
+     *
+     * @return view(htmldoc/ts)
+     */
+    public function showHtmlToTextPage()
+    {
+        $pagetitle = 'HTML to text';
+        return view('tools.htmltext')->with('pagetitle', $pagetitle);
+    }
+
+    /**
+     * Display the html to text page.
+     *
+     * @return view(htmldoc/ts)
+     */
+    public function showHtmlToText(Request $request)
+    {
+        $html = new \Html2Text\Html2Text($request["html"]);
+        $text = str_replace("\n", "<br>", $html->getText());
+        $pagetitle = 'HTML to text';
+        return view('tools.htmltext')->with([
+            'pagetitle' => $pagetitle,
+            'text' => $text
+        ]);
     }
 
     /**

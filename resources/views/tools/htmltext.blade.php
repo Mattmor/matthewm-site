@@ -1,6 +1,5 @@
 @extends('master')
 @section('headspace')
-    <script src="/js/loadingBar.js" type="text/javascript" charset="utf-8"></script>
 @endsection
 
 @section('header')
@@ -8,5 +7,9 @@
 @endsection
 
 @section('content')
-    @include('tools.content._youtube')
+    @include('tools.content._htmltext')
+@endsection
+
+@section('flash')
+
 @endsection

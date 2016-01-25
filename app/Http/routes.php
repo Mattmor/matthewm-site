@@ -46,6 +46,8 @@ Route::post('/register', 'Auth\AuthController@postRegister');
 Route::get('/tools', 'ToolsController@index');
 Route::get('/tools/youtube', 'ToolsController@showYoutube');
 Route::post('/tools/youtube', 'ToolsController@downloadYoutube');
+Route::get('/tools/htmltotext', 'ToolsController@showHtmlToTextPage');
+Route::post('/tools/htmltotext', 'ToolsController@showHtmlToText');
 Route::get('/tools/musiclearning', 'ToolsController@construction');
 Route::get('/tools/video', 'ToolsController@construction');
 Route::get('/tools/filedownload', 'ToolsController@construction');

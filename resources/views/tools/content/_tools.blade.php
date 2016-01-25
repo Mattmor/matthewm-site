@@ -18,13 +18,13 @@
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 spacebot">
                 <div class="card">
                     <div class="card-header">
-                        Music Learning Helper
+                        Html to text
                     </div>
-                    <a href="/tools/musiclearning">
+                    <a href="/tools/htmltotext">
                         <div class="card-picture" id="musiclearning"></div>
                     </a>
                     <div class="card-discription card-discription-hide card-discription-transition-down">
-                        This tool will help you learn music if you play guitar, bass, drums or you are a vocalist. One side is the tabs, lyrics or cover and the other side is the song.
+                        This tool changes html code into plain text. Great for web development!
                     </div>
                     <div class="card-arrow" id="0" onclick="showDiscriptionCard(this.id)">
                         <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
@@ -118,5 +118,29 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 spacebot">
+                <div class="card">
+                    <div class="card-header">
+                        Music Learning Helper
+                    </div>
+                    <a href="/tools/musiclearning">
+                        <div class="card-picture" id="musiclearning"></div>
+                    </a>
+                    <div class="card-discription card-discription-hide card-discription-transition-down">
+                        This tool will help you learn music if you play guitar, bass, drums or you are a vocalist. One side is the tabs, lyrics or cover and the other side is the song.
+                    </div>
+                    <div class="card-arrow" id="0" onclick="showDiscriptionCard(this.id)">
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 spacebot">
+
+            </div>
+        </div>
+
+
     </div>
 </div>
