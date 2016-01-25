@@ -36,5 +36,5 @@
                 <div class="mouth"></div>
             </div>
         </div>
-    @include('errors.list')
+    @include('htmldoc.flash._basicflash')
 </div>

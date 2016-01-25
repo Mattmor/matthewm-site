@@ -67,7 +67,7 @@ class ToolsController extends Controller
      */
     public function downloadYoutube(CookieJar $cookieJar, Request $request)
     {
-        setcookie("downloading", "false");
+        setcookie ("downloading", "false", time() + 3600, "/");
 
         if (str_contains($request["yturl"], '&')) {
             $request["yturl"] = substr($request["yturl"], 0, strpos($request["yturl"], '&'));;
