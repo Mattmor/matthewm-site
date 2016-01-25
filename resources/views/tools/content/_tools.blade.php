@@ -21,7 +21,7 @@
                         Html to text
                     </div>
                     <a href="/tools/htmltotext">
-                        <div class="card-picture" id="musiclearning"></div>
+                        <div class="card-picture" id="htmltotext"></div>
                     </a>
                     <div class="card-discription card-discription-hide card-discription-transition-down">
                         This tool changes html code into plain text. Great for web development!
@@ -96,7 +96,7 @@
                     <div class="card-discription card-discription-hide card-discription-transition-down">
                         Got a video you want to watch but dont have a good video player installed? Now you can watch it on the web! Pick the video you want to watch and let the magic happen.
                     </div>
-                    <div class="card-arrow" id="1" onclick="showDiscriptionCard(this.id)">
+                    <div class="card-arrow" id="4" onclick="showDiscriptionCard(this.id)">
                         <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                 </div>
@@ -131,7 +131,7 @@
                     <div class="card-discription card-discription-hide card-discription-transition-down">
                         This tool will help you learn music if you play guitar, bass, drums or you are a vocalist. One side is the tabs, lyrics or cover and the other side is the song.
                     </div>
-                    <div class="card-arrow" id="0" onclick="showDiscriptionCard(this.id)">
+                    <div class="card-arrow" id="6" onclick="showDiscriptionCard(this.id)">
                         <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
                     </div>
                 </div>
