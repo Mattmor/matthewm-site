@@ -91,7 +91,7 @@ class ToolsController extends Controller
      *
      * @return view(htmldoc/ts)
      */
-    public function downloadYoutube(CookieJar $cookieJar, Request $request)
+    public function downloadYoutube(Request $request)
     {
         setcookie ("downloading", "false", time() + 3600, "/");
 
