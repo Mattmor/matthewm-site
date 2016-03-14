@@ -95,6 +95,7 @@ class ToolsController extends Controller
     {
         setcookie ("downloading", "false", time() + 3600, "/");
 
+        //Validation
         if (str_contains($request["yturl"], '&')) {
             $request["yturl"] = substr($request["yturl"], 0, strpos($request["yturl"], '&'));;
         }
