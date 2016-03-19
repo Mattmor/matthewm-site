@@ -134,7 +134,6 @@ class ToolsController extends Controller
         try {
             $downloadYT = $dl->download($request["yturl"]);
         } catch (NotFoundException $e) {
-            dd($e);
             $pagetitle = 'Youtube Downloader';
             return redirect('/tools/youtube')->with([
                 'pagetitle' => $pagetitle,
@@ -164,19 +163,19 @@ class ToolsController extends Controller
                 'flash_message_danger' => 'Something went wrong. Please try again.'
             ]);
         }
-
+        // dd($downloadYT->getTitle());
         // Download the video to client
         if ($request["type"] == "Audio") {
             $headers = array(
                 'Content-Type: audio/mpeg',
             );
-            $fileLocation = $dl->getDownloadPath().str_replace(" ", "_", $downloadYT->getTitle()).'.mp3';
+            $fileLocation = $dl->getDownloadPath().$downloadYT->getTitle().'.mp3';
             return response()->download($fileLocation , $downloadYT->getTitle().'.mp3', $headers);
         } elseif ($request["type"] == "Video") {
             $headers = array(
                 'Content-Type: video/mp4',
             );
-            $fileLocation = $dl->getDownloadPath().str_replace(" ", "_", $downloadYT->getTitle()).'.mp4';
+            $fileLocation = $dl->getDownloadPath().$downloadYT->getTitle().'.mp4';
             return response()->download($fileLocation , $downloadYT->getTitle().'.mp4', $headers);
         }
     }
