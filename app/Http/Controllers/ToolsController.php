@@ -112,13 +112,13 @@ class ToolsController extends Controller
                 'extract-audio' => true,
                 'audio-format' => 'mp3',
                 'audio-quality' => 0, // best
-                'output' => '%(title)s.%(ext)s',
+                'output' => '%(id)s.%(ext)s',
             ]);
         } elseif ($request["type"] == "Video") {
             $dl = new YoutubeDl([
                 'continue' => true,
                 'format' => 'best',
-                'output' => '%(title)s.%(ext)s',
+                'output' => '%(id)s.%(ext)s',
             ]);
         } else {
             $pagetitle = 'Youtube Downloader';
@@ -128,7 +128,6 @@ class ToolsController extends Controller
                 'flash_message_danger' => 'Pick a file type to make the downloader work.'
             ]);
         }
-
         $dl->setDownloadPath(storage_path().'/app/youtube/');
         // Download the video to server
         try {
@@ -163,19 +162,18 @@ class ToolsController extends Controller
                 'flash_message_danger' => 'Something went wrong. Please try again.'
             ]);
         }
-        // dd($downloadYT->getTitle());
         // Download the video to client
         if ($request["type"] == "Audio") {
             $headers = array(
                 'Content-Type: audio/mpeg',
             );
-            $fileLocation = $dl->getDownloadPath().$downloadYT->getTitle().'.mp3';
+            $fileLocation = $dl->getDownloadPath().$downloadYT->getId().'.mp3';
             return response()->download($fileLocation , $downloadYT->getTitle().'.mp3', $headers);
         } elseif ($request["type"] == "Video") {
             $headers = array(
                 'Content-Type: video/mp4',
             );
-            $fileLocation = $dl->getDownloadPath().$downloadYT->getTitle().'.mp4';
+            $fileLocation = $dl->getDownloadPath().$downloadYT->getId().'.mp4';
             return response()->download($fileLocation , $downloadYT->getTitle().'.mp4', $headers);
         }
     }
